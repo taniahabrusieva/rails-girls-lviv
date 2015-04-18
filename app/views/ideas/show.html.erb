@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong class="text-uppercase">Name:</strong>
+  <i><%= @idea.name %></i>
+</p>
+
+<p>
+  <strong class="text-uppercase">Description:</strong>
+  <i><%= @idea.description %></i>
+</p>
+
+<p>
+  <strong class="text-uppercase">Picture:</strong>
+  <%= image_tag @idea.picture.url(:medium), class: "img-thumbnail" %>
+</p>
+
+<%= link_to 'Edit', edit_idea_path(@idea), class: "btn btn-success" %> |
+<%= link_to 'Back', ideas_path, class: "btn btn-success" %>
